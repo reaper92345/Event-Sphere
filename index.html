@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventSphere - Organizer Dashboard</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons (Phosphor Icons) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand">
+                <i class="ph-fill ph-planet logo-icon"></i>
+                <span>EventSphere</span>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#" class="nav-link active">
+                    <i class="ph ph-squares-four"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="ph ph-calendar-check"></i>
+                    <span>My Events</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="ph ph-plus-circle"></i>
+                    <span>New Event</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="ph ph-users"></i>
+                    <span>Registrations</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="ph ph-gear"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+
+            <div class="user-profile-mini">
+                <img src="https://ui-avatars.com/api/?name=Organizer+User&background=00FFFF&color=121212" alt="Profile" class="avatar-small">
+                <div class="user-info">
+                    <span class="user-name">Alex Morgan</span>
+                    <span class="user-role">Organizer</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="top-header">
+                <div class="mobile-toggle">
+                    <i class="ph ph-list"></i>
+                </div>
+                <div class="search-bar">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" placeholder="Search events, attendees...">
+                </div>
+                <div class="header-actions">
+                    <button class="icon-btn notification-btn">
+                        <i class="ph ph-bell"></i>
+                        <span class="badge">3</span>
+                    </button>
+                    <div class="profile-dropdown">
+                        <img src="https://ui-avatars.com/api/?name=Organizer+User&background=00FFFF&color=121212" alt="Profile" class="avatar">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard View -->
+            <div class="dashboard-view">
+                <!-- Welcome Banner -->
+                <section class="welcome-banner">
+                    <div class="banner-content">
+                        <h1>Welcome back, Alex!</h1>
+                        <p>You have 3 upcoming events this week. Check your readiness.</p>
+                    </div>
+                    <button class="btn-primary">
+                        <i class="ph ph-plus"></i> Create Event
+                    </button>
+                </section>
+
+                <!-- KPI Grid -->
+                <section class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-icon"><i class="ph ph-calendar-blank"></i></div>
+                        <div class="kpi-data">
+                            <span class="kpi-label">Total Events</span>
+                            <span class="kpi-value">25</span>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon"><i class="ph ph-users-three"></i></div>
+                        <div class="kpi-data">
+                            <span class="kpi-label">Total Registrations</span>
+                            <span class="kpi-value">1,500</span>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon"><i class="ph ph-trend-up"></i></div>
+                        <div class="kpi-data">
+                            <span class="kpi-label">New Today</span>
+                            <span class="kpi-value highlight">+42</span>
+                        </div>
+                    </div>
+                    <div class="kpi-card alert-card">
+                        <div class="kpi-icon"><i class="ph ph-warning-circle"></i></div>
+                        <div class="kpi-data">
+                            <span class="kpi-label">Capacity Alert</span>
+                            <span class="kpi-value warning">85%</span>
+                            <span class="kpi-subText">Tech Summit 2026</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Recent Activity / Events Layout -->
+                <section class="content-grid-2-1">
+                    <!-- Events Table -->
+                    <div class="card table-card">
+                        <div class="card-header">
+                            <h2>Upcoming Events</h2>
+                            <a href="#" class="view-all">View All</a>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="events-table">
+                                <thead>
+                                    <tr>
+                                        <th>Event Name</th>
+                                        <th>Date & Time</th>
+                                        <th>Status</th>
+                                        <th>Registrations</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="event-name-cell">
+                                                <span class="event-color red"></span>
+                                                Tech Workshop 2026
+                                            </div>
+                                        </td>
+                                        <td>Oct 25, 2026 • 10:00 AM</td>
+                                        <td><span class="status-badge published">Published</span></td>
+                                        <td>320 / 400</td>
+                                        <td><button class="icon-btn-sm"><i class="ph ph-dots-three-vertical"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="event-name-cell">
+                                                <span class="event-color blue"></span>
+                                                Music Festival
+                                            </div>
+                                        </td>
+                                        <td>Nov 12, 2026 • 04:00 PM</td>
+                                        <td><span class="status-badge draft">Draft</span></td>
+                                        <td>0 / 5000</td>
+                                        <td><button class="icon-btn-sm"><i class="ph ph-dots-three-vertical"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="event-name-cell">
+                                                <span class="event-color green"></span>
+                                                Startup Pitch
+                                            </div>
+                                        </td>
+                                        <td>Dec 05, 2026 • 09:00 AM</td>
+                                        <td><span class="status-badge published">Published</span></td>
+                                        <td>150 / 200</td>
+                                        <td><button class="icon-btn-sm"><i class="ph ph-dots-three-vertical"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="event-name-cell">
+                                                <span class="event-color purple"></span>
+                                                Design Sprint
+                                            </div>
+                                        </td>
+                                        <td>Jan 15, 2027 • 11:00 AM</td>
+                                        <td><span class="status-badge published">Published</span></td>
+                                        <td>45 / 50</td>
+                                        <td><button class="icon-btn-sm"><i class="ph ph-dots-three-vertical"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="event-name-cell">
+                                                <span class="event-color orange"></span>
+                                                DevOps Meetup
+                                            </div>
+                                        </td>
+                                        <td>Feb 20, 2027 • 06:30 PM</td>
+                                        <td><span class="status-badge closed">Closed</span></td>
+                                        <td>120 / 120</td>
+                                        <td><button class="icon-btn-sm"><i class="ph ph-dots-three-vertical"></i></button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Marketing / Chart Placeholder -->
+                    <div class="card chart-card">
+                         <div class="card-header">
+                            <h2>Registration Trend</h2>
+                            <select class="chart-select">
+                                <option>Last 30 Days</option>
+                            </select>
+                        </div>
+                        <div class="chart-placeholder">
+                            <!-- Simple pure CSS bar chart or just a placeholder visual -->
+                            <div class="placeholder-graphic">
+                                <div class="bar" style="height: 40%"></div>
+                                <div class="bar" style="height: 70%"></div>
+                                <div class="bar" style="height: 50%"></div>
+                                <div class="bar" style="height: 90%; background: var(--accent-teal);"></div>
+                                <div class="bar" style="height: 60%"></div>
+                                <div class="bar" style="height: 80%"></div>
+                            </div>
+                            <p class="chart-caption">+12% vs last month</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
